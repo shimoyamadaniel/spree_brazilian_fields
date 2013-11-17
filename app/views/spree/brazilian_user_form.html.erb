@@ -1,0 +1,52 @@
+<p id="user_account_type_box">
+  <%= f.radio_button "account_type", "personal", {:checked => true } %> <%= t(:personal_account) %>
+  <%= f.radio_button "account_type", "business" %> <%= t(:business_account) %>
+</p>
+
+<p>
+  <%= f.label :email, Spree.t(:email) %><br />
+  <%= f.email_field :email, :class => 'title' %>
+</p>
+
+<div id="personal_box">
+  <p>
+    <%= f.label :cpf, Spree.t(:cpf) %><br />
+    <%= f.text_field :cpf, :class => 'title' %>
+  </p>
+</div>
+
+<div id="business_box">
+  <p>
+    <%= f.label :cnpj, Spree.t(:cnpj) %><br />
+    <%= f.text_field :cnpj, :class => 'title' %>
+  </p>
+
+  <p>
+    <%= f.label :state_registry, Spree.t(:state_registry) %><br />
+    <%= f.text_field :state_registry, :class => 'title' %>
+  </p>
+
+  <p>
+    <%= f.label :company_name, Spree.t(:company_name) %><br />
+    <%= f.text_field :company_name, :class => 'title' %>
+  </p>
+</div>
+
+<div id="password-credentials">
+  <p>
+    <%= f.label :password, Spree.t(:password) %><br />
+    <%= f.password_field :password, :class => 'title' %>
+  </p>
+
+  <p>
+    <%= f.label :password_confirmation, Spree.t(:confirm_password) %><br />
+    <%= f.password_field :password_confirmation, :class => 'title' %>
+  </p>
+</div>
+
+<div data-hook="signup_below_password_fields"></div>
+
+
+<%= content_for :head do %>
+  <%= javascript_include_tag 'store/spree_brazilian_fields' %>
+<% end %>
