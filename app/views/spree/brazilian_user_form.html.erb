@@ -1,8 +1,8 @@
+<%= f.fields_for(:additional_information) do|g| %>
 <p id="user_account_type_box">
-  <%= f.radio_button "account_type", "personal", {:checked => true } %> <%= t(:personal_account) %>
-  <%= f.radio_button "account_type", "business" %> <%= t(:business_account) %>
+  <%= g.radio_button "account_type", "personal", { :checked => true } %> <%= Spree.t(:personal_account) %>
+  <%= g.radio_button "account_type", "business" %> <%= Spree.t(:business_account) %>
 </p>
-
 <p>
   <%= f.label :email, Spree.t(:email) %><br />
   <%= f.email_field :email, :class => 'title' %>
@@ -10,28 +10,39 @@
 
 <div id="personal_box">
   <p>
-    <%= f.label :cpf, Spree.t(:cpf) %><br />
-    <%= f.text_field :cpf, :class => 'title' %>
+    <%= g.label :name, Spree.t(:name) %><br />
+    <%= g.text_field :name, :class => 'title' %>
+  </p>
+  <p>
+    <%= g.label :cpf, Spree.t(:cpf) %><br />
+    <%= g.text_field :cpf, :class => 'title' %>
   </p>
 </div>
 
 <div id="business_box">
   <p>
-    <%= f.label :cnpj, Spree.t(:cnpj) %><br />
-    <%= f.text_field :cnpj, :class => 'title' %>
+    <%= g.label :cnpj, Spree.t(:cnpj) %><br />
+    <%= g.text_field :cnpj, :class => 'title' %>
   </p>
 
   <p>
-    <%= f.label :state_registry, Spree.t(:state_registry) %><br />
-    <%= f.text_field :state_registry, :class => 'title' %>
+    <%= g.label :company_name, Spree.t(:company_name) %><br />
+    <%= g.text_field :company_name, :class => 'title' %>
+  </p>
+  
+  <p>
+    <%= g.label :trading_name, Spree.t(:trading_name) %><br />
+    <%= g.text_field :trading_name, :class => 'title' %>
+  </p>
+  
+  <p>
+    <%= g.label :state_registry, Spree.t(:state_registry) %><br />
+    <%= g.text_field :state_registry, :class => 'title' %>
   </p>
 
-  <p>
-    <%= f.label :company_name, Spree.t(:company_name) %><br />
-    <%= f.text_field :company_name, :class => 'title' %>
-  </p>
+
 </div>
-
+<% end %>
 <div id="password-credentials">
   <p>
     <%= f.label :password, Spree.t(:password) %><br />

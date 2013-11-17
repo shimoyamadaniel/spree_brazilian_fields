@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'money', '~> 5.1.1'
 
   s.add_development_dependency 'capybara', '~> 2.1'
+  s.add_development_dependency 'pry'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'shoulda-matchers'
