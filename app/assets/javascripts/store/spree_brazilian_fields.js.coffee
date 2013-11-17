@@ -31,5 +31,5 @@ jQuery ->
       enable '#spree_user_additional_information_attributes_cpf'
       enable '#spree_user_additional_information_attributes_name'
 
-  toggle_fields
   $('[name="spree_user[additional_information_attributes][account_type]"]').click(toggle_fields)
+toggle_fields
