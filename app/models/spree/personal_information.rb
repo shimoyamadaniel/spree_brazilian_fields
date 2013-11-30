@@ -6,6 +6,6 @@ module Spree
       validates_with CpfValidator
 
       belongs_to(:user)
-
+  
   end
 end
