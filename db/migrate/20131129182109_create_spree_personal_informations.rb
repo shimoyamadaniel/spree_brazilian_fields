@@ -4,7 +4,6 @@ class CreateSpreePersonalInformations < ActiveRecord::Migration
       t.integer :user_id
       t.string :full_name, :limit => 100, :null => false
       t.string :cpf, :limit => 50, :null => false
-      t.string :gender, :limit => 10, :null => false
       t.timestamps
     end
     add_index :spree_personal_informations, :user_id
