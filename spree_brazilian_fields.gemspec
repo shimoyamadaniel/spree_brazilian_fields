@@ -3,16 +3,16 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_brazilian_fields'
   s.version     = '2.1.2'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Brazilian Fields For Spree ~> 2.1'
+  s.description = 'Add customized fields for Spree::User'
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'Daniel Shimoyama'
   s.email     = 'shimoyama.daniel@gmail.com'
   s.homepage  = 'https://github.com/shimoyamadaniel'
 
-  #s.files       = `git ls-files`.split("\n")
-  #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files       = `git ls-files`.split("\n")
+  s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
