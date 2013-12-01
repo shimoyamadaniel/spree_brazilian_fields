@@ -12,7 +12,7 @@ module Spree
     
     def spree_user_params
       attributes = Spree::PermittedAttributes.user_attributes
-      attributes += [:personal_information_attributes => [:cpf, :full_name]]
+      attributes += [:personal_information_attributes => [:cpf, :full_name, :birthday, :gender]]
       params.require(:spree_user).permit(attributes)
     end
 
