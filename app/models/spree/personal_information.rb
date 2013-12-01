@@ -6,6 +6,8 @@ module Spree
       validates :cpf, :uniqueness => true, :length => { :maximum => 50 }
       validates_with CpfValidator
 
+      validates :birthday, :date => true
+
       belongs_to :user
   
   end

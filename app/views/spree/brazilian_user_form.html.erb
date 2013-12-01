@@ -18,6 +18,10 @@
     <%= g.radio_button :gender, "male" %> <%= Spree.t(:male) %>
     <%= g.radio_button :gender, "female" %> <%= Spree.t(:female) %>
   </p>
+  <p>
+    <%= g.label :birthday, Spree.t(:birthday) %><br />
+    <%= g.text_field :birthday, :class => 'title' %>
+  </p>
 </div>
 <% end %>
 <div id="password-credentials">
