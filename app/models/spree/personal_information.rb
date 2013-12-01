@@ -6,6 +6,9 @@ module Spree
       validates :cpf, :uniqueness => true, :length => { :maximum => 50 }
       validates_with CpfValidator
 
+      validates :phone, :presence => true, :length => { :maximum => 20 }
+      validates :cellphone, :length => { :maximum => 20 }, :allow_blank => true
+
       validates_date :birthday, 
               :before => lambda { 18.years.ago },
               :before_message => Spree.t(:must_be_at_least_18_years_old)
