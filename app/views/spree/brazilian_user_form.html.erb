@@ -32,7 +32,7 @@
   </p>
   
 </div>
-<% end %>
+
 <div id="password-credentials">
   <p>
     <%= f.label :password, Spree.t(:password) %><br />
@@ -45,14 +45,14 @@
   </p>
 </div>
 
-<div>
-  <%= f.check_box :accepted_terms %> <%= Spree.t(:read_and_accept_the_terms) %>
-  <% if f.object.errors[:acceted_terms].first %>
-    <div class="formError">
-      <%= f.object.errors[:acceted_terms].first %>
-    </div>
-  <% end %>
-</div>
-
+  <div>
+    <%= g.check_box :accepted_terms %> <%= Spree.t(:read_and_accept_the_terms) %>
+    <% if g.object.errors[:acceted_terms].first %>
+      <div class="formError">
+        <%= g.object.errors[:acceted_terms].first %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
 <div data-hook="signup_below_password_fields"></div>
 
