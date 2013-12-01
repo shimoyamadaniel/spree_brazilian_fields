@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'spree_core', '~> 2.1.0'
   s.add_dependency 'spree_frontend', '~> 2.1.0'
   s.add_dependency 'money', '~> 5.1.1'
-  s.add_dependency 'date_validator', '~> 0.7.0'
+  s.add_dependency 'validates_timeliness', '~> 3.0'
 
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'pry'

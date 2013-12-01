@@ -1,0 +1,18 @@
+pt-BR:
+  spree:
+    must_be_at_least_18_years_old: "Deve ter pelo menos 18 anos"
+  errors:
+    messages:
+      invalid_date: "não é valido"
+      invalid_time: "não é valido"
+      invalid_datetime: "não é valido"
+      is_at: "deve estar %{restriction}"
+      before: "deve ser anterior %{restriction}"
+      on_or_before: "deve estar ou ser anterior de %{restriction}"
+      after: "deve ser depois de %{restriction}"
+      on_or_after: "deve estar ou ser depois de %{restriction}"
+  validates_timeliness:
+    error_value_formats:
+      date: '%d/%m/%Y'
+      time: '%H:%M:%S'
+      datetime: '%d/%m/%Y %H:%M:%S'
