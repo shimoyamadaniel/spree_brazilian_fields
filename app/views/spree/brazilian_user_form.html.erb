@@ -36,5 +36,14 @@
   </p>
 </div>
 
+<div>
+  <%= f.check_box :accepted_terms %> <%= Spree.t(:read_and_accept_the_terms) %>
+  <% if f.object.errors[:acceted_terms].first %>
+    <div class="formError">
+      <%= f.object.errors[:acceted_terms].first %>
+    </div>
+  <% end %>
+</div>
+
 <div data-hook="signup_below_password_fields"></div>
 

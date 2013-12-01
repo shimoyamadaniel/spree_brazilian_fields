@@ -10,6 +10,8 @@ module Spree
               :before => lambda { 18.years.ago },
               :before_message => Spree.t(:must_be_at_least_18_years_old)
 
+      validates :accepted_terms, :presence => { :message => Spree.t(:must_accept_terms) }
+
       belongs_to :user
   
   end
