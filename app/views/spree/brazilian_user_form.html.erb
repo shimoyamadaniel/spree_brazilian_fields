@@ -13,6 +13,11 @@
     <%= g.label :cpf, Spree.t(:cpf) %><br />
     <%= g.text_field :cpf, :class => 'title' %>
   </p>
+  <p>
+    <%= g.label :gender, Spree.t(:gender) %><br />
+    <%= g.radio_button :gender, "male" %> <%= Spree.t(:male) %>
+    <%= g.radio_button :gender, "female" %> <%= Spree.t(:female) %>
+  </p>
 </div>
 <% end %>
 <div id="password-credentials">
